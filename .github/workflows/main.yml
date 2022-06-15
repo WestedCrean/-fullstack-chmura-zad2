@@ -30,7 +30,8 @@ jobs:
           replace-with: '-'
           flags: 'g'
 
-
+      - name: Cleanup
+        run: rm -rf node_modules
 
       - name: Generate deployment package
         run: zip -r deploy.zip . -x '*.git*'
