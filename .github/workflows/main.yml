@@ -1,18 +1,18 @@
-name: Deploy master
+name: Deploy main
 on:
   push:
-    branches: ["master"]
+    branches: ["main"]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Get Timestamp
-        uses: gerred/actions/current-time@master
+        uses: gerred/actions/current-time@main
         id: current-time
 
       - name: Run String Replace
-        uses: frabert/replace-string-action@master
+        uses: frabert/replace-string-action@main
         id: format-time
         with:
           pattern: '[:\.]+'
