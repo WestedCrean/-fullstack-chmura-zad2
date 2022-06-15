@@ -31,8 +31,8 @@ jobs:
         with:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY }}
           aws_secret_key: ${{ secrets.AWS_SECRET_KEY }}
-          application_name: wflis-zad2-chmura
-          environment_name: Wfliszad2chmura-env
+          application_name: docker-arm
+          environment_name: docker-arm-env
           existing_bucket_name: elasticbeanstalk-us-east-1-734436184395
           version_label: "docker-app-${{ steps.format-time.outputs.replaced }}"
           region: us-east-1
