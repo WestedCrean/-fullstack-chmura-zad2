@@ -1,7 +1,7 @@
 name: Deploy feature branches directly to EBS
 on:
   push:
-    branches: ["feature/*"]
+    branches: ["main", "feature/*"]
 
 jobs:
   build:
