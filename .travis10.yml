@@ -1,0 +1,11 @@
+sudo: required
+language: generic
+
+services:
+  - docker
+
+before_install:
+  - docker build -t spglab/wyk7 -f Dockerfile.dev2 .
+
+script:
+  - docker run -e CI=true spglab/wyk7 npm run test
